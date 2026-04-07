@@ -1,0 +1,241 @@
+/* ============================================
+   MENU PAGE STYLES — menu.css
+   ============================================ */
+
+.menu-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5% 80px;
+}
+
+/* --- Intro --- */
+.menu-intro {
+  text-align: center;
+  padding: 56px 0 32px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.menu-intro p {
+  font-size: 1rem;
+  color: #4a3020;
+  line-height: 1.9;
+}
+
+.menu-intro__note {
+  margin-top: 16px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem !important;
+  color: var(--color-amber) !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Filter Tabs --- */
+.menu-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 24px 0 48px;
+  border-bottom: 1px solid rgba(196,98,29,0.15);
+  margin-bottom: 56px;
+}
+
+.filter-btn {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 24px;
+  border: 1.5px solid rgba(196,98,29,0.3);
+  background: transparent;
+  color: var(--color-amber);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--color-amber);
+  color: #fff;
+  border-color: var(--color-amber);
+}
+
+/* --- Menu Section --- */
+.menu-section {
+  margin-bottom: 72px;
+  transition: opacity 0.3s ease;
+}
+
+.menu-section.hidden {
+  display: none;
+}
+
+.menu-section__header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.menu-section__header h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--color-earth);
+  white-space: nowrap;
+}
+
+.menu-section__line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(196,98,29,0.4), transparent);
+}
+
+/* --- Menu Grid --- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.menu-grid--small {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* --- Menu Item Card --- */
+.menu-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  background: #fff;
+  padding: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(59,35,20,0.07);
+  border: 1px solid rgba(196,98,29,0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.menu-item:hover {
+  box-shadow: 0 8px 28px rgba(59,35,20,0.13);
+  transform: translateY(-3px);
+}
+
+/* Side/drink items are text-only (no image) */
+.menu-item--side {
+  grid-template-columns: 1fr;
+  padding: 20px 24px;
+}
+
+/* Image placeholder */
+.menu-item__image-placeholder {
+  width: 140px;
+  min-height: 120px;
+  background: linear-gradient(135deg, #e8c98a44, #c4621d22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  color: var(--color-amber);
+  text-align: center;
+  padding: 8px;
+  flex-shrink: 0;
+  border-right: 1px dashed rgba(196,98,29,0.2);
+}
+
+/*
+  TO USE YOUR OWN IMAGE:
+  Replace the placeholder div with:
+  <img src="images/dish-name.jpg" alt="Dish name" class="menu-item__image" />
+  And add this CSS:
+  .menu-item__image { width: 140px; height: 100%; object-fit: cover; }
+*/
+
+.menu-item__info {
+  padding: 18px 18px 18px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item--side .menu-item__info {
+  padding: 0;
+}
+
+.menu-item__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.menu-item__name {
+  font-size: 1rem;
+  color: var(--color-earth);
+  line-height: 1.3;
+}
+
+.menu-item__name .tag {
+  font-size: 0.8rem;
+}
+
+.menu-item__price {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-amber);
+  white-space: nowrap;
+}
+
+.menu-item__desc {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: #6b4e38;
+  line-height: 1.65;
+}
+
+.menu-item__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.menu-item__tags span {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  background: rgba(90,107,62,0.1);
+  border: 1px solid rgba(90,107,62,0.25);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.menu-item__tags .chef-pick {
+  color: var(--color-amber);
+  background: rgba(196,98,29,0.1);
+  border-color: rgba(196,98,29,0.3);
+}
+
+/* ============================================
+   MENU — RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-item {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .menu-item__image-placeholder {
+    width: 100px;
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Safari Roots</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">Safari <span>Roots</span></a>
+    <button class="navbar__toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== PAGE HERO ========== -->
+  <header class="page-hero">
+    <div class="page-hero__content">
+      <p class="page-hero__eyebrow">A Feast for the Eyes</p>
+      <h1 class="page-hero__title">Our Gallery</h1>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================================
+         IMAGE SLIDER (Featured / Hero Slideshow)
+         ======================================== -->
+    <section class="slider-section">
+      <p class="section-subtitle section-subtitle--centered">Featured</p>
+      <h2 class="section-title section-title--centered">Moments at Safari Roots</h2>
+      <div class="section-divider section-divider--spaced"></div>
+
+      <div class="slider" id="heroSlider" role="region" aria-label="Featured image slider">
+
+
+        <div class="slider__slide slide--active" data-caption="Our open kitchen — where the magic happens">
+          <div class="slider__placeholder-text">
+            <span>Slide 1 — Kitchen / Restaurant Interior</span>
+            <img src="images/kitchen.jpg" alt="Our open kitchen — where the magic happens">
+          </div>
+        </div>
+
+        <div class="slider__slide" data-caption="A colourful spread of starters ready for the table">
+          <div class="slider__placeholder-text">
+            <img src="images/honey.jpg" alt="A colourful spread of starters ready for the table">
+          </div>
+        </div>
+
+        <div class="slider__slide slide--nyama" data-caption="Nyama Choma night — sizzling straight off the grill">
+          <div class="slider__placeholder-text">
+            <span>Slide 3 — Nyama Choma on the Grill</span>
+            <img src="images/nyama choma platter.jpg" alt="Nyama Choma night — sizzling straight off the grill">
+          </div>
+        </div>
+
+        <div class="slider__slide slide--dining" data-caption="The dining room set for a special evening">
+          <div class="slider__placeholder-text">
+            <span>Slide 4 — Dining Room Setup</span>
+            <img src="images/dining.jpg" alt="The dining room set for a special evening">
+          </div>
+        </div>
+
+        <div class="slider__slide slide--tagine"
+          data-caption="Tagine fresh from the clay pot — North Africa on a plate">
+          <div class="slider__placeholder-text">
+            <span>Slide 5 — Lamb Tagine Dish</span>
+            <img src="images/lamb tagine.jpg" alt="Lamb Tagine">
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider__btn slider__btn--prev" id="sliderPrev" aria-label="Previous slide">&#8592;</button>
+        <button class="slider__btn slider__btn--next" id="sliderNext" aria-label="Next slide">&#8594;</button>
+
+        <!-- Caption Bar -->
+        <div class="slider__caption" id="sliderCaption">Our open kitchen — where the magic happens</div>
+
+        <!-- Dot Indicators -->
+        <div class="slider__dots" id="sliderDots"></div>
+      </div>
+    </section>
+
+    <!-- PHOTO GRID — FOOD -->
+    <section class="gallery-section">
+      <div class="gallery-section__header">
+        <p class="section-subtitle">On the Plate</p>
+        <h2 class="section-title">Food Photography</h2>
+        <div class="section-divider"></div>
+        <p class="gallery-section__hint">
+          Click/tap any image to view it larger. Replace placeholder divs with
+          <code>&lt;img src="images/..."&gt;</code> tags.
+        </p>
+      </div>
+
+      <div class="photo-grid">
+
+
+        <div class="photo-item photo-item--large" data-label="Jollof Rice" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Jollof Rice</span><img src="images/jollof rice.jpg" alt="Jollof Rice">
+          </div>
+          <div class="photo-overlay"><span>Signature Jollof Rice</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Nyama Choma" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Nyama Choma</span><img src="images/nyama choma platter.jpg"
+              alt="Nyama Choma"></div>
+          <div class="photo-overlay"><span>Nyama Choma Platter</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Tagine" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Tagine</span><img src="images/lamb tagine.jpg" alt="Lamb Tagine"></div>
+          <div class="photo-overlay"><span>Lamb Tagine</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Samosas" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Samosas</span><img src="images/beef samosa.jpg" alt="Beef Samosas"></div>
+          <div class="photo-overlay"><span>Beef Samosas</span></div>
+        </div>
+
+        <div class="photo-item photo-item--tall" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Egusi Soup</span><img src="images/egusi-soup.jpg" alt="Egusi Soup"></div>
+          <div class="photo-overlay"><span>Egusi Soup</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Drinks" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Zobo Drink</span><img src="images/hibiscus.jpg" alt="Hibiscus Zobo">
+          </div>
+          <div class="photo-overlay"><span>Hibiscus Zobo</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Mandazi" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Mandazi</span><img src="images/tea and mandazi.jpg" alt="Mandazi"></div>
+          <div class="photo-overlay"><span>Mandazi & Chai</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Suya" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Suya Skewers</span><img src="images/suya skewer.jpg" alt="Suya Skewers">
+          </div>
+          <div class="photo-overlay"><span>Suya Skewers</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESTAURANT AMBIANCE GRID-->
+    <section class="gallery-section gallery-section--dark">
+      <div class="gallery-section__header">
+        <p class="section-subtitle">The Experience</p>
+        <h2 class="section-title section-title--light">Our Space</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="photo-grid">
+
+        <div class="photo-item" data-label="Dining Room" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Dining Room</span><img src="images/dinning.jpg" alt="Dining Room"></div>
+          <div class="photo-overlay"><span>The Dining Room</span></div>
+        </div>
+
+        <div class="photo-item photo-item--large" data-label="Bar" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Bar Area</span><img src="images/bar.jpg" alt="bar"></div>
+          <div class="photo-overlay"><span>Our Bar</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Kitchen" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Open Kitchen</span><img src="images/kitchen.jpg" alt="Open Kitchen">
+          </div>
+          <div class="photo-overlay"><span>Open Kitchen</span></div>
+        </div>
+
+        <div class="photo-item" data-label="Outdoor" onclick="openLightbox(this)">
+          <div class="photo-placeholder"><span>Outdoor Terrace</span><img src="images/outdoor.jpg"
+              alt="Outdoor Terrace"></div>
+          <div class="photo-overlay"><span>Garden Terrace</span></div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+      <div class="lightbox__content" id="lightboxContent">
+        <!-- Image or placeholder will be injected here by JS -->
+      </div>
+      <div class="lightbox__label" id="lightboxLabel"></div>
+    </div>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Safari Roots</div>
+        <p class="footer__tagline">Bringing the soul of Africa to every plate, every day.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Visit Us</h4>
+        <ul class="footer__info">
+          <li>14 Acacia Lane, Westlands</li>
+          <li>Nairobi, Kenya</li>
+          <li> +254 700 123 456</li>
+          <li> hello@safariroots.co.ke</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2024 Safari Roots Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script src="gallery.js"></script>
+</body>
+
+</html>

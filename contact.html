@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Safari Roots</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">Safari <span>Roots</span></a>
+    <button class="navbar__toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== PAGE HERO ========== -->
+  <header class="page-hero">
+    <div class="page-hero__content">
+      <p class="page-hero__eyebrow">We'd Love to Hear from You</p>
+      <h1 class="page-hero__title">Get in Touch</h1>
+    </div>
+  </header>
+
+  <main class="contact-page">
+
+    <!-- ========== CONTACT GRID ========== -->
+    <section class="contact-section">
+
+      <!-- === Info Column === -->
+      <div class="contact-info">
+
+        <div class="contact-info__block">
+          <p class="section-subtitle">Find Us</p>
+          <h2 class="section-title">Visit Safari Roots</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <ul class="contact-details">
+          <li class="contact-detail-item">
+            <div class="contact-detail-item__icon"></div>
+            <div>
+              <strong>Address</strong>
+              <span>14 Acacia Lane, Westlands</span>
+              <span>Nairobi, Kenya</span>
+            </div>
+          </li>
+          <li class="contact-detail-item">
+            <div class="contact-detail-item__icon"></div>
+            <div>
+              <strong>Phone</strong>
+              <span><a href="tel:+254700123456">+254 700 123 456</a></span>
+              <span><a href="tel:+254700123457">+254 700 123 457</a> (Reservations)</span>
+            </div>
+          </li>
+          <li class="contact-detail-item">
+            <div class="contact-detail-item__icon"></div>
+            <div>
+              <strong>Email</strong>
+              <span><a href="mailto:hello@safariroots.co.ke">hello@safariroots.co.ke</a></span>
+              <span><a href="mailto:events@safariroots.co.ke">events@safariroots.co.ke</a></span>
+            </div>
+          </li>
+          <li class="contact-detail-item">
+            <div class="contact-detail-item__icon"></div>
+            <div>
+              <strong>Opening Hours</strong>
+              <span>Mon – Fri: 11:00 AM – 10:00 PM</span>
+              <span>Sat – Sun: 9:00 AM – 11:00 PM</span>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder">
+          <span>🗺️ Google Maps Embed</span>
+          <iframe src="https://www.google.com/maps/search/acacia-place-ol-donyo-sabuk-road-ground-floor-nairobi-kenya"
+            frameborder="0"
+            title="Google Maps showing Safari Roots location at 14 Acacia Lane, Westlands, Nairobi, Kenya">YOU ARE
+            WELCOME</iframe>
+        </div>
+
+      </div>
+
+      <!-- === Form Column === -->
+      <div class="contact-form-wrap">
+
+        <div class="contact-form-header">
+          <p class="section-subtitle">Send a Message</p>
+          <h2 class="section-title">Make a Reservation<br>or Enquiry</h2>
+          <div class="section-divider"></div>
+          <p class="contact-form-header__note">
+            For large groups (8+) or private events, please use the
+            <strong>Events</strong> option below so we can prepare accordingly.
+          </p>
+        </div>
+
+    
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <!-- Enquiry Type -->
+          <div class="form-group">
+            <label class="form-label" for="enquiryType">Enquiry Type</label>
+            <select class="form-input form-select" id="enquiryType" name="enquiryType">
+              <option value="reservation">Table Reservation</option>
+              <option value="events">Private Events / Large Group</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">General Enquiry</option>
+            </select>
+          </div>
+
+          <!-- Name row -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name <span class="required">*</span></label>
+              <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Amara"
+                autocomplete="given-name" required />
+              <span class="form-error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name <span class="required">*</span></label>
+              <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Ochieng"
+                autocomplete="family-name" required />
+              <span class="form-error" id="lastNameError"></span>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="amara@example.com"
+              autocomplete="email" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+254 700 000 000"
+              autocomplete="tel" />
+          </div>
+
+          <!-- Reservation date/time (shown for reservations) -->
+          <div class="form-row" id="reservationRow">
+            <div class="form-group">
+              <label class="form-label" for="date">Preferred Date</label>
+              <input class="form-input" type="date" id="date" name="date" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="guests">Number of Guests</label>
+              <input class="form-input" type="number" id="guests" name="guests" min="1" max="50" placeholder="2" />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label class="form-label" for="message">Message <span class="required">*</span></label>
+            <textarea class="form-input form-textarea" id="message" name="message" rows="5"
+              placeholder="Tell us about any dietary requirements, special occasions, or questions…"
+              required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary form-submit" id="formSubmit">
+            Send Message
+          </button>
+
+          <!-- Success / Error feedback messages -->
+          <div class="form-feedback form-feedback--success" id="formSuccess" role="alert">
+            Thank you! We've received your message and will be in touch within 24 hours.
+          </div>
+          <div class="form-feedback form-feedback--error" id="formGlobalError" role="alert">
+
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Safari Roots</div>
+        <p class="footer__tagline">Bringing the soul of Africa to every plate, every day.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Visit Us</h4>
+        <ul class="footer__info">
+          <li>14 Acacia Lane, Westlands</li>
+          <li>Nairobi, Kenya</li>
+          <li> +254 700 123 456</li>
+          <li> hello@safariroots.co.ke</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2024 Safari Roots Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script src="contact.js"></script>
+</body>
+
+</html>

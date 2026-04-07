@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Safari Roots</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+  <!--  NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">Safari <span>Roots</span></a>
+    <button class="navbar__toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!--  PAGE HERO  -->
+  <header class="page-hero">
+    <div class="page-hero__content">
+      <p class="page-hero__eyebrow">A Culinary Journey</p>
+      <h1 class="page-hero__title">Our Menu</h1>
+    </div>
+  </header>
+
+  <main class="menu-page">
+
+    <!-- MENU INTRO -->
+    <section class="menu-intro">
+      <p>
+        Every dish at Safari Roots is crafted with time-honoured techniques 
+        and the finest local and imported African ingredients. 
+        Our menu rotates seasonally to celebrate what the continent offers.
+      </p>
+      <p class="menu-intro__note">
+         Vegetarian &nbsp;  Spicy &nbsp; Gluten-Free Available
+      </p>
+    </section>
+
+    <!--  FILTER TABS  -->
+    <section class="menu-filter">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="starters">Starters</button>
+      <button class="filter-btn" data-category="mains">Mains</button>
+      <button class="filter-btn" data-category="sides">Sides</button>
+      <button class="filter-btn" data-category="desserts">Desserts</button>
+      <button class="filter-btn" data-category="drinks">Drinks</button>
+    </section>
+
+    <!-- STARTERS -->
+    <section class="menu-section" data-category="starters">
+      <div class="menu-section__header">
+        <h2>Starters</h2>
+        <div class="menu-section__line"></div>
+      </div>
+      <div class="menu-grid">
+
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item__image-placeholder"><img src="images/beef samosa.jpg" alt="Beef Samosas" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Beef Samosas <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 450</span>
+            </div>
+            <p class="menu-item__desc">Crispy golden pastry filled with spiced minced beef, onions, and herbs. Served with tamarind dipping sauce.</p>
+            <div class="menu-item__tags">
+              <span>East Africa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item__image-placeholder"><img src="images/ankara fritters.jpg" alt="Akara Fritters" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Akara Fritters <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 380</span>
+            </div>
+            <p class="menu-item__desc">Light black-eyed pea fritters fried to perfection. A beloved West African street food, served with pepper sauce.</p>
+            <div class="menu-item__tags">
+              <span>West Africa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item__image-placeholder"><img src="images/harisa-hummus.jpg" alt="Harissa Hummus" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Harissa Hummus <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 420</span>
+            </div>
+            <p class="menu-item__desc">Creamy chickpea hummus swirled with fiery North African harissa paste, drizzled with olive oil. Served with flatbread.</p>
+            <div class="menu-item__tags">
+              <span>North Africa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item__image-placeholder"><img src="images/suya skewer.jpg" alt="Suya Skewers" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Suya Skewers <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 580</span>
+            </div>
+            <p class="menu-item__desc">Tender beef skewers coated in a peanut-spice rub and grilled over charcoal. A Nigerian classic that needs no introduction.</p>
+            <div class="menu-item__tags">
+              <span>West Africa</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAINS -->
+    <section class="menu-section" data-category="mains">
+      <div class="menu-section__header">
+        <h2>Main Courses</h2>
+        <div class="menu-section__line"></div>
+      </div>
+      <div class="menu-grid">
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item__image-placeholder"><img src="images/jollof rice.jpg" alt="Signature Jollof Rice" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Signature Jollof Rice</h3>
+              <span class="menu-item__price">KSh 950</span>
+            </div>
+            <p class="menu-item__desc">Our famous smoky party jollof cooked in rich tomato and pepper base. Served with grilled chicken or fish of the day.</p>
+            <div class="menu-item__tags"><span>West Africa</span><span class="chef-pick">Chef's Pick</span></div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item__image-placeholder"><img src="images/nyama choma platter.jpg" alt="Nyama Choma Platter" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Nyama Choma Platter</h3>
+              <span class="menu-item__price">KSh 1,450</span>
+            </div>
+            <p class="menu-item__desc">Half kg of seasoned char-grilled beef or goat. Comes with kachumbari, roasted potatoes, and ugali.</p>
+            <div class="menu-item__tags"><span>East Africa</span><span class="chef-pick">Most Popular</span></div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item__image-placeholder"><img src="images/lamb tagine.jpg" alt="Lamb Tagine" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Lamb Tagine <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 1,300</span>
+            </div>
+            <p class="menu-item__desc">Slow-cooked lamb shoulder with preserved lemons, olives, apricots, and ras el hanout spice blend. Served over couscous.</p>
+            <div class="menu-item__tags"><span>North Africa</span></div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item__image-placeholder"><img src="images/egusi-soup.jpg" alt="Egusi Soup" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Egusi Soup <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 1,050</span>
+            </div>
+            <p class="menu-item__desc">Ground melon seeds cooked in palm oil with leafy greens, stockfish, and assorted meats. Served with pounded yam or fufu.</p>
+            <div class="menu-item__tags"><span>West Africa</span></div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item__image-placeholder"><img src="images/whole tilapia drill.jpg" alt="Whole Tilapia Grill" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Whole Tilapia Grill <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 1,200</span>
+            </div>
+            <p class="menu-item__desc">Fresh Lake Victoria tilapia marinated in lemon, garlic, and spices, grilled whole. Served with sukuma wiki and chapati.</p>
+            <div class="menu-item__tags"><span>East Africa</span></div>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item__image-placeholder"><img src="images/bobotie.jpg" alt="Bobotie" srcset=""></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Bobotie</h3>
+              <span class="menu-item__price">KSh 1,100</span>
+            </div>
+            <p class="menu-item__desc">South Africa's beloved spiced minced meat bake with dried fruit, topped with a golden egg custard. Served with yellow rice.</p>
+            <div class="menu-item__tags"><span>Southern Africa</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SIDES -->
+    <section class="menu-section" data-category="sides">
+      <div class="menu-section__header">
+        <h2>Sides & Accompaniments</h2>
+        <div class="menu-section__line"></div>
+      </div>
+      <div class="menu-grid menu-grid--small">
+
+        <div class="menu-item menu-item--side" data-category="sides">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Ugali (Plain / Millet) <div><img src="images/ugali.jpg" alt="Ugali"></div></h3>
+              <span class="menu-item__price">KSh 150</span>
+            </div>
+            <p class="menu-item__desc">Classic East African maize or millet porridge, firm-set. The perfect accompaniment to any stew.</p>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item--side" data-category="sides">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Fried Plantain <div><img src="images/fried plantain.jpg" alt="Fried Plantain"></div></h3>
+              <span class="menu-item__price">KSh 250</span>
+            </div>
+            <p class="menu-item__desc">Sweet ripe plantains pan-fried in coconut oil until caramelised. Irresistibly good on their own.</p>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item--side" data-category="sides">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Couscous Salad  <div><img src="images/salad.jpg" alt="salad"></div>
+              <span class="menu-item__price">KSh 320</span>
+            </div>
+            <p class="menu-item__desc">Fluffy couscous tossed with roasted vegetables, herbs, and a harissa vinaigrette.</p>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item--side" data-category="sides">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Chapati (4 pcs) <div><img src="images/chapati.jpg" alt="Chapati"></div></h3>
+              <span class="menu-item__price">KSh 200</span>
+            </div>
+            <p class="menu-item__desc">Layered, soft East African wheat flatbreads cooked on a hot griddle with just a touch of oil.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--  DESSERTS -->
+    <section class="menu-section" data-category="desserts">
+      <div class="menu-section__header">
+        <h2>Desserts</h2>
+        <div class="menu-section__line"></div>
+      </div>
+      <div class="menu-grid">
+
+        <div class="menu-item" data-category="desserts">
+          <div class="menu-item__image-placeholder"><img src="images/tea and mandazi.jpg" alt="Mandazi & Chai"></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Mandazi & Chai <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 280</span>
+            </div>
+            <p class="menu-item__desc">Fluffy East African doughnuts with coconut and cardamom, served warm with spiced masala chai.</p>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+          <div class="menu-item__image-placeholder"><img src="images/pudding .jpg" alt="Malva Pudding"></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Malva Pudding</h3>
+              <span class="menu-item__price">KSh 380</span>
+            </div>
+            <p class="menu-item__desc">Classic South African sticky sponge pudding soaked in warm caramel sauce. Served with cream or custard.</p>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+          <div class="menu-item__image-placeholder"><img src="images/honey.jpg" alt="honey"></div>
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Honey Baklava <span class="tag">🌿</span></h3>
+              <span class="menu-item__price">KSh 350</span>
+            </div>
+            <p class="menu-item__desc">Layers of crispy phyllo with pistachios and almonds, drenched in orange-blossom honey syrup.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DRINKS  -->
+    <section class="menu-section" data-category="drinks">
+      <div class="menu-section__header">
+        <h2>Drinks</h2>
+        <div class="menu-section__line"></div>
+      </div>
+      <div class="menu-grid menu-grid--small">
+
+        <div class="menu-item menu-item--side" data-category="drinks">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Hibiscus Zobo <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 200</span>
+            </div>
+            <p class="menu-item__desc">Chilled hibiscus flower drink with ginger and citrus. Sweet, tart, and deeply refreshing.</p>
+            <div class="menu-item__image-placeholder"><img src="images/hibiscus.jpg" alt="Hibiscus Zobo"></div>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item--side" data-category="drinks">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Masala Chai <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 180</span>
+            </div>
+            <p class="menu-item__desc">Kenyan tea brewed with cardamom, ginger, cinnamon, and cloves. Strong, creamy, and warming.</p>
+            <div class="menu-item__image-placeholder"><img src="images/tea masala.jpg" alt="Masala Chai"></div>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item--side" data-category="drinks">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Tamarind Juice <span class="tag"></span></h3>
+              <span class="menu-item__price">KSh 220</span>
+            </div>
+            <p class="menu-item__desc">Tangy tamarind concentrate diluted with water and lightly sweetened. A cooling East African classic.</p>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item--side" data-category="drinks">
+          <div class="menu-item__info">
+            <div class="menu-item__top">
+              <h3 class="menu-item__name">Tusker Premium Lager</h3>
+              <span class="menu-item__price">KSh 350</span>
+            </div>
+            <p class="menu-item__desc">Kenya's iconic premium lager. Crisp, cold, and perfectly paired with Nyama Choma.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Safari Roots</div>
+        <p class="footer__tagline">Bringing the soul of Africa to every plate, every day.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Visit Us</h4>
+        <ul class="footer__info">
+          <li> 14 Acacia Lane, Westlands</li>
+          <li>Nairobi, Kenya</li>
+          <li> +254 700 123 456</li>
+          <li> hello@safariroots.co.ke</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2024 Safari Roots Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
